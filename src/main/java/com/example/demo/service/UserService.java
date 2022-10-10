@@ -3,11 +3,16 @@ package com.example.demo.service;
 import com.example.demo.bean.UserRequest;
 import com.example.demo.model.User;
 
+import java.util.List;
+
 public interface UserService {
-    void save(User user);
+   User saveUser(User user);
+   User getUserById(Integer id);
 
-    Double salaryInPaperUsd(Double byn);
-    Double salaryInPaperEur(Double byn);
+   List<User> getAllUsers();
 
-    void saveUser(UserRequest userRequest);
+   String deleteUserBuId(Integer id);
+
+
+   Object updateUser(User user);
 }
