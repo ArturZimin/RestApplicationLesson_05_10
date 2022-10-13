@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.bean.UserDtoRequest;
 import com.example.demo.bean.UserRequest;
 import com.example.demo.model.User;
 
@@ -15,4 +16,10 @@ public interface UserService {
 
 
    Object updateUser(User user);
+
+   User findUserByName(String name);
+
+
+
+   List<User> getTwoUsers(String name, String name2);
 }

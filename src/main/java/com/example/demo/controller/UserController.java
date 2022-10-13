@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.bean.UserDtoRequest;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,5 +49,16 @@ public class UserController {
     public List<User> updateUser(@RequestBody User user){
 
         return (List<User>) userService.updateUser(user);
+    }
+
+    @GetMapping("/get/users/by/name/{name}")
+    public User findUsersByName(@PathVariable String name){
+        return userService.findUserByName(name);
+    }
+
+    @PostMapping("/get/two/users/by/name/")
+    public List<User> getTwoUserByName(@RequestBody UserDtoRequest request){
+
+        return userService.getTwoUsers(request.getName(),request.getName2());
     }
 }

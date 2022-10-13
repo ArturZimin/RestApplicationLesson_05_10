@@ -17,6 +17,8 @@ public class User {
     private Integer id;
     @Column
     private String name;
-    @Column
-    private Double salary;
+
+    @OneToOne
+    @JoinColumn(name = "salary_id")
+    private Salary salary;
 }

@@ -5,15 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Entity;
+
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class CurrencyResponse {
+public class UserDtoRequest {
 
-    private Double usd;
-    private Double eur;
-    private Double cny;//юань
-    private Double chf;//швейцарский франк
+    private String name;
+    private String name2;
 }
-

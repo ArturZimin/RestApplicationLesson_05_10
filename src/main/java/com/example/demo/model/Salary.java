@@ -1,9 +1,6 @@
 package com.example.demo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,11 +9,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="salary")
+@ToString
 public class Salary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-   private Integer id;
-    @Column(name="user_id")
-    private Integer userId;
+    private Integer id;
+
+
+
+    private Double value;
 }
